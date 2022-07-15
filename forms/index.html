@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <form>
+            <input type="text" name="username" placeholder="username" />
+            <input type="password" name="password" placeholder="password" />
+            <button>Submit form</button>
+        </form>
+
+        <script>
+            // const inputs = document.querySelectorAll('input');
+            // console.log(inputs);
+            const form = document.forms[0];
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                const username = form.username.value;
+                const password = form.password.value;
+
+                console.log(username, password);
+
+                // reset values
+                form.username.value = '';
+                form.password.value = '';
+            });
+        </script>
+    </body>
+</html>
